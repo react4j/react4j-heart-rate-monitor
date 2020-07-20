@@ -7,25 +7,22 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
-@Generated( "org.realityforge.webtack" )
+@Generated("org.realityforge.webtack")
 @JsType(
-  isNative = true,
-  namespace = JsPackage.GLOBAL,
-  name = "?"
+    isNative = true,
+    namespace = JsPackage.GLOBAL,
+    name = "?"
 )
-public interface StringOrUnsignedLongUnion
-{
+public interface StringOrUnsignedLongUnion {
   @JsOverlay
   @Nonnull
-  static StringOrUnsignedLongUnion of( @Nonnull final String value )
-  {
+  static StringOrUnsignedLongUnion of(@Nonnull final String value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static StringOrUnsignedLongUnion of( final int value )
-  {
+  static StringOrUnsignedLongUnion of(final int value) {
     return Js.cast( value );
   }
 }
