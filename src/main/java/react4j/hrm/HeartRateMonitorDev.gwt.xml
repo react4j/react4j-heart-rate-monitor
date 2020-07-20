@@ -1,0 +1,8 @@
+<module rename-to='heart-rate-monitor_dev'>
+  <inherits name='react4j.hrm.HeartRateMonitor'/>
+  <inherits name='react4j.dom.DomDev'/>
+  <inherits name='arez.ArezDebug'/>
+
+  <source path='ignore'/>
+  <public path='public/dev'/>
+</module>
