@@ -37,7 +37,7 @@ public class BluetoothCharacteristicProperties {
   @JsProperty(
       name = "notify"
   )
-  public native boolean notify();
+  public native boolean _notify();
 
   @JsProperty(
       name = "read"
