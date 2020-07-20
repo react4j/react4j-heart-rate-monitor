@@ -51,5 +51,5 @@ define 'react4j-heart-rate-monitor' do
                             :open_in_browser => false,
                             :vm_parameters => '-Xmx2G',
                             :shell_parameters => "-strict -style PRETTY -XmethodNameDisplayMode FULL -nostartServer -incremental -codeServerPort 8889 -bindAddress 0.0.0.0 -deploy #{_(:generated, :gwt, 'deploy')} -extra #{_(:generated, :gwt, 'extra')} -war #{_(:generated, :gwt, 'war')}",
-                            :launch_page => 'http://127.0.0.1:8889/heart-rate-monitor_dev/index.html')
+                            :launch_page => 'http://127.0.0.1:8889/hrm_dev/index.html')
 end

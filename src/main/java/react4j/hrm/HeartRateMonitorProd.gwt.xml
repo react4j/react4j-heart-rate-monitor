@@ -1,4 +1,4 @@
-<module rename-to='heart-rate-monitor'>
+<module rename-to='hrm'>
   <inherits name='react4j.hrm.HeartRateMonitor'/>
   <inherits name='com.google.gwt.precompress.Precompress'/>
 
