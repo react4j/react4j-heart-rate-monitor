@@ -48,7 +48,7 @@ task 'site:deploy' => ['site:build'] do
     message ="Update Heart Rate Monitor website#{travis_build_number.nil? ? '' : " - Travis build: #{travis_build_number}"}"
 
     rm_rf "#{local_dir}/heart-rate-monitor"
-    cp_r Dir["#{SITE_DIR}/hrm"], "#{local_dir}/heart-rate-monitor"
+    cp_r "#{SITE_DIR}/hrm", "#{local_dir}/heart-rate-monitor"
     sh 'git add . -f'
     puts `git commit -m "#{message}"`
     if 0 == $?.exitstatus
