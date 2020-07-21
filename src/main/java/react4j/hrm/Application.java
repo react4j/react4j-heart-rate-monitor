@@ -1,8 +1,6 @@
 package react4j.hrm;
 
 import arez.annotations.CascadeDispose;
-import arez.annotations.Feature;
-import arez.annotations.Observable;
 import elemental2.dom.DomGlobal;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
@@ -22,11 +20,6 @@ abstract class Application
   @Nonnull
   @CascadeDispose
   final HeartRateMonitor _heartRateMonitor = HeartRateMonitor.create();
-
-  @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
-  abstract boolean isExpandAnimation();
-
-  abstract void setExpandAnimation( boolean expandAnimation );
 
   @Nonnull
   @Render
@@ -60,10 +53,7 @@ abstract class Application
     imgProps.prop( "onAnimationStart", Js.asAny( onAnimationStart ) );
     final ReactEventHandler onAnimationEnd = e -> DomGlobal.console.log( e.getNativeEvent() );
     imgProps.prop( "onAnimationEnd", Js.asAny( onAnimationEnd ) );
-    final ReactEventHandler onAnimationIteration = e -> {
-      DomGlobal.console.log( e.getNativeEvent() );
-      setExpandAnimation( !isExpandAnimation() );
-    };
+    final ReactEventHandler onAnimationIteration = e -> DomGlobal.console.log( e.getNativeEvent() );
     imgProps.prop( "onAnimationIteration", Js.asAny( onAnimationIteration ) );
     return
       div( new HtmlProps().className( "container" ),
@@ -71,7 +61,6 @@ abstract class Application
                 h1( "Heart Rate Monitor" ),
                 img( imgProps ),
                 0 != heartRate ? ReactNode.of( heartRate ) : null,
-                0 != heartRate ? ( isExpandAnimation() ? ReactNode.of( " Expand" ) : ReactNode.of( " Contract" ) ) : null,
                 button( new BtnProps()
                           .disabled( connected )
                           .onClick( e -> _heartRateMonitor.connect() ),
