@@ -14,7 +14,7 @@ SITE_DIR = "#{WORKSPACE_DIR}/reports/site"
 
 desc 'Build the part of the website for this branch'
 task 'site:build' do
-  project = Buildr.project('react4j-webspeechdemo')
+  project = Buildr.project('react4j-heart-rate-monitor')
   rm_rf SITE_DIR
   mkdir_p SITE_DIR
 
