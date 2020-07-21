@@ -9,7 +9,7 @@ import react4j.dom.proptypes.html.HtmlProps;
 import react4j.dom.proptypes.html.ImgProps;
 import static react4j.dom.DOM.*;
 
-@View
+@View( type = View.Type.TRACKING )
 abstract class Application
 {
   @Nonnull
