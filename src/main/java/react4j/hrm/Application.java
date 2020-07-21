@@ -2,12 +2,10 @@ package react4j.hrm;
 
 import arez.annotations.CascadeDispose;
 import javax.annotation.Nonnull;
-import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Render;
 import react4j.annotations.View;
 import react4j.dom.proptypes.html.BtnProps;
-import react4j.dom.proptypes.html.CssProps;
 import react4j.dom.proptypes.html.HtmlProps;
 import react4j.dom.proptypes.html.ImgProps;
 import static react4j.dom.DOM.*;
@@ -23,23 +21,7 @@ abstract class Application
   @Render
   ReactNode render()
   {
-    final CssProps cssProps = new CssProps();
-
     final int heartRate = _heartRateMonitor.getHeartRate();
-    if ( heartRate > 0 )
-    {
-      cssProps
-        .animationName( "beating" )
-        .animationDirection( "alternate" )
-        .animationIterationCount( "infinite" );
-      //TODO: Add mapping for this into react4j
-      Js.asPropertyMap( cssProps ).set( "animationTimingFunction", "ease-in" );
-      // We used to try and change the animated duration but this property
-      // can not be used in transition and changing it in onAnimationIteration is
-      // seemingly too late and causes animation to reset
-      //TODO: Add mapping for this into react4j
-      Js.asPropertyMap( cssProps ).set( "animationDuration", "0.8s" );
-    }
     final boolean connected = _heartRateMonitor.isConnected();
 
     return
@@ -47,8 +29,7 @@ abstract class Application
            div( new HtmlProps().className( "hrm_panel" ),
                 h1( "Heart Rate Monitor" ),
                 img( new ImgProps()
-                       .className( "heart" )
-                       .style( cssProps )
+                       .className( "heart", heartRate > 0 ? "beating" : null )
                        .src( "img/heart.svg" ) ),
                 0 != heartRate ? ReactNode.of( heartRate ) : null,
                 button( new BtnProps()
