@@ -1,13 +1,11 @@
 package react4j.hrm;
 
 import arez.annotations.CascadeDispose;
-import elemental2.dom.DomGlobal;
 import javax.annotation.Nonnull;
 import jsinterop.base.Js;
 import react4j.ReactNode;
 import react4j.annotations.Render;
 import react4j.annotations.View;
-import react4j.dom.events.ReactEventHandler;
 import react4j.dom.proptypes.html.BtnProps;
 import react4j.dom.proptypes.html.CssProps;
 import react4j.dom.proptypes.html.HtmlProps;
@@ -43,23 +41,15 @@ abstract class Application
       Js.asPropertyMap( cssProps ).set( "animationDuration", "0.8s" );
     }
     final boolean connected = _heartRateMonitor.isConnected();
-    final ImgProps imgProps = new ImgProps()
-      .className( "heart" )
-      .style( cssProps )
-      .src( "img/heart.svg" );
 
-    //TODO: Add react4j support for onAnimationStart onAnimationEnd onAnimationIteration
-    final ReactEventHandler onAnimationStart = e -> DomGlobal.console.log( e.getNativeEvent() );
-    imgProps.prop( "onAnimationStart", Js.asAny( onAnimationStart ) );
-    final ReactEventHandler onAnimationEnd = e -> DomGlobal.console.log( e.getNativeEvent() );
-    imgProps.prop( "onAnimationEnd", Js.asAny( onAnimationEnd ) );
-    final ReactEventHandler onAnimationIteration = e -> DomGlobal.console.log( e.getNativeEvent() );
-    imgProps.prop( "onAnimationIteration", Js.asAny( onAnimationIteration ) );
     return
       div( new HtmlProps().className( "container" ),
            div( new HtmlProps().className( "hrm_panel" ),
                 h1( "Heart Rate Monitor" ),
-                img( imgProps ),
+                img( new ImgProps()
+                       .className( "heart" )
+                       .style( cssProps )
+                       .src( "img/heart.svg" ) ),
                 0 != heartRate ? ReactNode.of( heartRate ) : null,
                 button( new BtnProps()
                           .disabled( connected )
