@@ -21,9 +21,7 @@ public interface BluetoothPermissionStorage {
   @Nonnull
   static BluetoothPermissionStorage create(
       @Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
-    final BluetoothPermissionStorage $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setAllowedDevices( allowedDevices );
-    return $instance$;
+    return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
   @JsProperty

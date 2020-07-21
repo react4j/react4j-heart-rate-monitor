@@ -20,9 +20,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   static BluetoothAdvertisingEventInit create(@Nonnull final BluetoothDevice device) {
-    final BluetoothAdvertisingEventInit $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setDevice( device );
-    return $instance$;
+    return Js.<BluetoothAdvertisingEventInit>uncheckedCast( JsPropertyMap.of() ).device( device );
   }
 
   @JsProperty
@@ -128,6 +126,30 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @Nonnull
   default BluetoothAdvertisingEventInit uuids(@Nonnull JsArray<StringOrUnsignedLongUnion> uuids) {
     setUuids( uuids );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default BluetoothAdvertisingEventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default BluetoothAdvertisingEventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default BluetoothAdvertisingEventInit composed(boolean composed) {
+    setComposed( composed );
     return this;
   }
 }

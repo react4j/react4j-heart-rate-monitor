@@ -19,9 +19,7 @@ public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static PermissionDescriptor create(@Nonnull final String name) {
-    final PermissionDescriptor $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setName( name );
-    return $instance$;
+    return Js.<PermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty

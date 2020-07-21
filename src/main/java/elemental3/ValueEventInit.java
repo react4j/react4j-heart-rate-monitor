@@ -37,4 +37,28 @@ public interface ValueEventInit extends EventInit {
     setValue( value );
     return this;
   }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default ValueEventInit bubbles(boolean bubbles) {
+    setBubbles( bubbles );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default ValueEventInit cancelable(boolean cancelable) {
+    setCancelable( cancelable );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default ValueEventInit composed(boolean composed) {
+    setComposed( composed );
+    return this;
+  }
 }

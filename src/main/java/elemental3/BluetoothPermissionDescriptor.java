@@ -20,9 +20,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   static BluetoothPermissionDescriptor create(@Nonnull final String name) {
-    final BluetoothPermissionDescriptor $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setName( name );
-    return $instance$;
+    return Js.<BluetoothPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty
@@ -76,6 +74,14 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   default BluetoothPermissionDescriptor optionalServices(
       @Nonnull JsArray<BluetoothServiceUUID> optionalServices) {
     setOptionalServices( optionalServices );
+    return this;
+  }
+
+  @JsOverlay
+  @Nonnull
+  @Override
+  default BluetoothPermissionDescriptor name(@Nonnull String name) {
+    setName( name );
     return this;
   }
 }

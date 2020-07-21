@@ -1,5 +1,6 @@
 package elemental3;
 
+import elemental2.core.JsArray;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
@@ -18,13 +19,16 @@ import jsinterop.base.JsPropertyMap;
 public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
-  static AllowedBluetoothDevice create(@Nonnull final StringOrUUIDArrayUnion allowedServices,
+  static AllowedBluetoothDevice create(@Nonnull final String allowedServices,
       @Nonnull final String deviceId, final boolean mayUseGATT) {
-    final AllowedBluetoothDevice $instance$ = Js.uncheckedCast( JsPropertyMap.of() );
-    $instance$.setAllowedServices( allowedServices );
-    $instance$.setDeviceId( deviceId );
-    $instance$.setMayUseGATT( mayUseGATT );
-    return $instance$;
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  }
+
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final JsArray<String> allowedServices,
+      @Nonnull final String deviceId, final boolean mayUseGATT) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
   }
 
   @JsProperty
@@ -35,8 +39,25 @@ public interface AllowedBluetoothDevice {
   void setAllowedServices(@Nonnull StringOrUUIDArrayUnion allowedServices);
 
   @JsOverlay
+  default void setAllowedServices(@Nonnull final String allowedServices) {
+    setAllowedServices( StringOrUUIDArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull StringOrUUIDArrayUnion allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull String allowedServices) {
+    setAllowedServices( allowedServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAllowedServices(@Nonnull final JsArray<String> allowedServices) {
+    setAllowedServices( StringOrUUIDArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice allowedServices(@Nonnull JsArray<String> allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
