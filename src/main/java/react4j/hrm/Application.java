@@ -20,12 +20,13 @@ abstract class Application
   @Render
   ReactNode render()
   {
+    final int heartRate = _heartRateMonitor.getHeartRate();
     return
       div( new HtmlProps().className( "container" ),
            div( new HtmlProps().className( "hrm_panel" ),
                 h1( "Heart Rate Monitor" ),
                 img( new ImgProps().className( "heart" ).src( "img/heart.svg" ) ),
-                ReactNode.of( _heartRateMonitor.getHearRate() )
+                0 != heartRate ? ReactNode.of( heartRate ) : null,
            )
       );
   }
