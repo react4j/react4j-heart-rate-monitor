@@ -22,7 +22,6 @@ abstract class Application
   @Nonnull
   @CascadeDispose
   final HeartRateMonitor _heartRateMonitor = HeartRateMonitor.create();
-  double _animationDuration;
 
   @Observable( readOutsideTransaction = Feature.ENABLE, writeOutsideTransaction = Feature.ENABLE )
   abstract boolean isExpandAnimation();
@@ -38,25 +37,17 @@ abstract class Application
     final int heartRate = _heartRateMonitor.getHeartRate();
     if ( heartRate > 0 )
     {
-      if( 0 == _animationDuration )
-      {
-        // We used to try and change the animated duration but this property
-        // can not be used in transition and changing it in onAnimationIteration is
-        // seemingly too late and causes animation to reset
-        _animationDuration = ( (int) ( 60.0 * 100.0 / heartRate ) ) / 100.0;
-      }
       cssProps
         .animationName( "beating" )
         .animationDirection( "alternate" )
         .animationIterationCount( "infinite" );
       //TODO: Add mapping for this into react4j
       Js.asPropertyMap( cssProps ).set( "animationTimingFunction", "ease-in" );
+      // We used to try and change the animated duration but this property
+      // can not be used in transition and changing it in onAnimationIteration is
+      // seemingly too late and causes animation to reset
       //TODO: Add mapping for this into react4j
-      Js.asPropertyMap( cssProps ).set( "animationDuration", _animationDuration + "s" );
-    }
-    else
-    {
-      _animationDuration = 0;
+      Js.asPropertyMap( cssProps ).set( "animationDuration", "0.8s" );
     }
     final boolean connected = _heartRateMonitor.isConnected();
     final ImgProps imgProps = new ImgProps()
