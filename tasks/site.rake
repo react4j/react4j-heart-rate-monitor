@@ -45,7 +45,7 @@ task 'site:deploy' => ['site:build'] do
   sh "git clone -b master --depth 1 #{origin_url} #{local_dir}"
 
   in_dir(local_dir) do
-    message ="Update DrumLoop website#{travis_build_number.nil? ? '' : " - Travis build: #{travis_build_number}"}"
+    message ="Update Heart Rate Monitor website#{travis_build_number.nil? ? '' : " - Travis build: #{travis_build_number}"}"
 
     rm_rf "#{local_dir}/heart-rate-monitor"
     cp_r Dir["#{SITE_DIR}/hrm"], "#{local_dir}/heart-rate-monitor"
