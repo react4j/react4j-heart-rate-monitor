@@ -43,8 +43,21 @@ public class BluetoothRemoteGATTServer {
       @Nonnull BluetoothServiceUUID service);
 
   @Nonnull
+  public native Promise<BluetoothRemoteGATTService> getPrimaryService(@Nonnull String service);
+
+  @Nonnull
+  public native Promise<BluetoothRemoteGATTService> getPrimaryService(int service);
+
+  @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
       @Nonnull BluetoothServiceUUID service);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(
+      @Nonnull String service);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices(int service);
 
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getPrimaryServices();

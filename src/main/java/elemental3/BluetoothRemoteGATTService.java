@@ -57,8 +57,23 @@ public class BluetoothRemoteGATTService extends EventTarget {
       @Nonnull BluetoothCharacteristicUUID characteristic);
 
   @Nonnull
+  public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
+      @Nonnull String characteristic);
+
+  @Nonnull
+  public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(int characteristic);
+
+  @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       @Nonnull BluetoothCharacteristicUUID characteristic);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
+      @Nonnull String characteristic);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
+      int characteristic);
 
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics();
@@ -68,8 +83,21 @@ public class BluetoothRemoteGATTService extends EventTarget {
       @Nonnull BluetoothServiceUUID service);
 
   @Nonnull
+  public native Promise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
+
+  @Nonnull
+  public native Promise<BluetoothRemoteGATTService> getIncludedService(int service);
+
+  @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull BluetoothServiceUUID service);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
+      @Nonnull String service);
+
+  @Nonnull
+  public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
 
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
