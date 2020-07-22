@@ -31,7 +31,7 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit manufacturerData(@Nonnull Object manufacturerData) {
+  default BluetoothLEScanFilterInit manufacturerData(@Nonnull final Object manufacturerData) {
     setManufacturerData( manufacturerData );
     return this;
   }
@@ -44,7 +44,7 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit name(@Nonnull String name) {
+  default BluetoothLEScanFilterInit name(@Nonnull final String name) {
     setName( name );
     return this;
   }
@@ -57,7 +57,7 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit namePrefix(@Nonnull String namePrefix) {
+  default BluetoothLEScanFilterInit namePrefix(@Nonnull final String namePrefix) {
     setNamePrefix( namePrefix );
     return this;
   }
@@ -70,7 +70,7 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit serviceData(@Nonnull Object serviceData) {
+  default BluetoothLEScanFilterInit serviceData(@Nonnull final Object serviceData) {
     setServiceData( serviceData );
     return this;
   }
@@ -83,7 +83,8 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit services(@Nonnull JsArray<BluetoothServiceUUID> services) {
+  default BluetoothLEScanFilterInit services(
+      @Nonnull final JsArray<BluetoothServiceUUID> services) {
     setServices( services );
     return this;
   }

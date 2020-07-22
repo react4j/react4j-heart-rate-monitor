@@ -45,7 +45,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull String allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -57,7 +57,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull JsArray<String> allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final JsArray<String> allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
@@ -71,7 +71,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice deviceId(@Nonnull String deviceId) {
+  default AllowedBluetoothDevice deviceId(@Nonnull final String deviceId) {
     setDeviceId( deviceId );
     return this;
   }
@@ -84,7 +84,7 @@ public interface AllowedBluetoothDevice {
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice mayUseGATT(boolean mayUseGATT) {
+  default AllowedBluetoothDevice mayUseGATT(final boolean mayUseGATT) {
     setMayUseGATT( mayUseGATT );
     return this;
   }

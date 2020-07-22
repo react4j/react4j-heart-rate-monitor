@@ -31,7 +31,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit appearance(int appearance) {
+  default BluetoothAdvertisingEventInit appearance(final int appearance) {
     setAppearance( appearance );
     return this;
   }
@@ -45,7 +45,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit device(@Nonnull BluetoothDevice device) {
+  default BluetoothAdvertisingEventInit device(@Nonnull final BluetoothDevice device) {
     setDevice( device );
     return this;
   }
@@ -59,7 +59,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default BluetoothAdvertisingEventInit manufacturerData(
-      @Nonnull BluetoothManufacturerDataMap manufacturerData) {
+      @Nonnull final BluetoothManufacturerDataMap manufacturerData) {
     setManufacturerData( manufacturerData );
     return this;
   }
@@ -72,7 +72,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit name(@Nonnull String name) {
+  default BluetoothAdvertisingEventInit name(@Nonnull final String name) {
     setName( name );
     return this;
   }
@@ -85,7 +85,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit rssi(byte rssi) {
+  default BluetoothAdvertisingEventInit rssi(final byte rssi) {
     setRssi( rssi );
     return this;
   }
@@ -98,7 +98,8 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit serviceData(@Nonnull BluetoothServiceDataMap serviceData) {
+  default BluetoothAdvertisingEventInit serviceData(
+      @Nonnull final BluetoothServiceDataMap serviceData) {
     setServiceData( serviceData );
     return this;
   }
@@ -111,7 +112,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit txPower(byte txPower) {
+  default BluetoothAdvertisingEventInit txPower(final byte txPower) {
     setTxPower( txPower );
     return this;
   }
@@ -124,7 +125,8 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default BluetoothAdvertisingEventInit uuids(@Nonnull JsArray<StringOrUnsignedLongUnion> uuids) {
+  default BluetoothAdvertisingEventInit uuids(
+      @Nonnull final JsArray<StringOrUnsignedLongUnion> uuids) {
     setUuids( uuids );
     return this;
   }
@@ -132,7 +134,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default BluetoothAdvertisingEventInit bubbles(boolean bubbles) {
+  default BluetoothAdvertisingEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -140,7 +142,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default BluetoothAdvertisingEventInit cancelable(boolean cancelable) {
+  default BluetoothAdvertisingEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -148,7 +150,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default BluetoothAdvertisingEventInit composed(boolean composed) {
+  default BluetoothAdvertisingEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

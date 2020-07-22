@@ -30,7 +30,7 @@ public interface WatchAdvertisementsOptions {
 
   @JsOverlay
   @Nonnull
-  default WatchAdvertisementsOptions signal(@Nonnull AbortSignal signal) {
+  default WatchAdvertisementsOptions signal(@Nonnull final AbortSignal signal) {
     setSignal( signal );
     return this;
   }

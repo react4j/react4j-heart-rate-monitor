@@ -31,7 +31,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor acceptAllDevices(boolean acceptAllDevices) {
+  default BluetoothPermissionDescriptor acceptAllDevices(final boolean acceptAllDevices) {
     setAcceptAllDevices( acceptAllDevices );
     return this;
   }
@@ -44,7 +44,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor deviceId(@Nonnull String deviceId) {
+  default BluetoothPermissionDescriptor deviceId(@Nonnull final String deviceId) {
     setDeviceId( deviceId );
     return this;
   }
@@ -58,7 +58,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   default BluetoothPermissionDescriptor filters(
-      @Nonnull JsArray<BluetoothLEScanFilterInit> filters) {
+      @Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
     setFilters( filters );
     return this;
   }
@@ -72,7 +72,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   default BluetoothPermissionDescriptor optionalServices(
-      @Nonnull JsArray<BluetoothServiceUUID> optionalServices) {
+      @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
     setOptionalServices( optionalServices );
     return this;
   }
@@ -80,7 +80,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
   @JsOverlay
   @Nonnull
   @Override
-  default BluetoothPermissionDescriptor name(@Nonnull String name) {
+  default BluetoothPermissionDescriptor name(@Nonnull final String name) {
     setName( name );
     return this;
   }

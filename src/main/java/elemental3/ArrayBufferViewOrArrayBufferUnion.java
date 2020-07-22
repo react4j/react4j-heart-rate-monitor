@@ -1,13 +1,12 @@
 package elemental3;
 
+import elemental2.core.ArrayBuffer;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
-import jsinterop.base.JsPropertyMap;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,23 +14,16 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface EventListenerOptions {
+public interface ArrayBufferViewOrArrayBufferUnion {
   @JsOverlay
   @Nonnull
-  static EventListenerOptions create() {
-    return Js.uncheckedCast( JsPropertyMap.of() );
+  static ArrayBufferViewOrArrayBufferUnion of(@Nonnull final ArrayBufferView value) {
+    return Js.cast( value );
   }
 
-  @JsProperty
-  boolean isCapture();
-
-  @JsProperty
-  void setCapture(boolean capture);
-
   @JsOverlay
   @Nonnull
-  default EventListenerOptions capture(final boolean capture) {
-    setCapture( capture );
-    return this;
+  static ArrayBufferViewOrArrayBufferUnion of(@Nonnull final ArrayBuffer value) {
+    return Js.cast( value );
   }
 }

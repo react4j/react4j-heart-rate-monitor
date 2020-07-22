@@ -33,7 +33,7 @@ public interface ValueEventInit extends EventInit {
 
   @JsOverlay
   @Nonnull
-  default ValueEventInit value(@Nullable Any value) {
+  default ValueEventInit value(@Nullable final Any value) {
     setValue( value );
     return this;
   }
@@ -41,7 +41,7 @@ public interface ValueEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default ValueEventInit bubbles(boolean bubbles) {
+  default ValueEventInit bubbles(final boolean bubbles) {
     setBubbles( bubbles );
     return this;
   }
@@ -49,7 +49,7 @@ public interface ValueEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default ValueEventInit cancelable(boolean cancelable) {
+  default ValueEventInit cancelable(final boolean cancelable) {
     setCancelable( cancelable );
     return this;
   }
@@ -57,7 +57,7 @@ public interface ValueEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   @Override
-  default ValueEventInit composed(boolean composed) {
+  default ValueEventInit composed(final boolean composed) {
     setComposed( composed );
     return this;
   }

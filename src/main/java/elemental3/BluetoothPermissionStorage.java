@@ -34,7 +34,7 @@ public interface BluetoothPermissionStorage {
   @JsOverlay
   @Nonnull
   default BluetoothPermissionStorage allowedDevices(
-      @Nonnull JsArray<AllowedBluetoothDevice> allowedDevices) {
+      @Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
     setAllowedDevices( allowedDevices );
     return this;
   }

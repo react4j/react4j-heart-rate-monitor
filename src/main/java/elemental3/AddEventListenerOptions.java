@@ -30,7 +30,7 @@ public interface AddEventListenerOptions extends EventListenerOptions {
 
   @JsOverlay
   @Nonnull
-  default AddEventListenerOptions once(boolean once) {
+  default AddEventListenerOptions once(final boolean once) {
     setOnce( once );
     return this;
   }
@@ -43,7 +43,7 @@ public interface AddEventListenerOptions extends EventListenerOptions {
 
   @JsOverlay
   @Nonnull
-  default AddEventListenerOptions passive(boolean passive) {
+  default AddEventListenerOptions passive(final boolean passive) {
     setPassive( passive );
     return this;
   }
@@ -51,7 +51,7 @@ public interface AddEventListenerOptions extends EventListenerOptions {
   @JsOverlay
   @Nonnull
   @Override
-  default AddEventListenerOptions capture(boolean capture) {
+  default AddEventListenerOptions capture(final boolean capture) {
     setCapture( capture );
     return this;
   }

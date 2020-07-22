@@ -31,7 +31,7 @@ public interface RequestDeviceOptions {
 
   @JsOverlay
   @Nonnull
-  default RequestDeviceOptions acceptAllDevices(boolean acceptAllDevices) {
+  default RequestDeviceOptions acceptAllDevices(final boolean acceptAllDevices) {
     setAcceptAllDevices( acceptAllDevices );
     return this;
   }
@@ -44,7 +44,7 @@ public interface RequestDeviceOptions {
 
   @JsOverlay
   @Nonnull
-  default RequestDeviceOptions filters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters) {
+  default RequestDeviceOptions filters(@Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
     setFilters( filters );
     return this;
   }
@@ -58,7 +58,7 @@ public interface RequestDeviceOptions {
   @JsOverlay
   @Nonnull
   default RequestDeviceOptions optionalServices(
-      @Nonnull JsArray<BluetoothServiceUUID> optionalServices) {
+      @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
     setOptionalServices( optionalServices );
     return this;
   }
