@@ -31,6 +31,13 @@ public interface AllowedBluetoothDevice {
     return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
   }
 
+  @JsOverlay
+  @Nonnull
+  static AllowedBluetoothDevice create(@Nonnull final String[] allowedServices,
+      @Nonnull final String deviceId, final boolean mayUseGATT) {
+    return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
+  }
+
   @JsProperty
   @Nonnull
   StringOrUUIDArrayUnion getAllowedServices();
@@ -58,6 +65,18 @@ public interface AllowedBluetoothDevice {
   @JsOverlay
   @Nonnull
   default AllowedBluetoothDevice allowedServices(@Nonnull final JsArray<String> allowedServices) {
+    setAllowedServices( allowedServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAllowedServices(@Nonnull final String[] allowedServices) {
+    setAllowedServices( StringOrUUIDArrayUnion.of( allowedServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String[] allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }

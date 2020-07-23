@@ -24,6 +24,12 @@ public interface BluetoothPermissionStorage {
     return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
+  @JsOverlay
+  @Nonnull
+  static BluetoothPermissionStorage create(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+    return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
+  }
+
   @JsProperty
   @Nonnull
   JsArray<AllowedBluetoothDevice> getAllowedDevices();
@@ -35,6 +41,19 @@ public interface BluetoothPermissionStorage {
   @Nonnull
   default BluetoothPermissionStorage allowedDevices(
       @Nonnull final JsArray<AllowedBluetoothDevice> allowedDevices) {
+    setAllowedDevices( allowedDevices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+    setAllowedDevices( JsArray.asJsArray( allowedDevices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default BluetoothPermissionStorage allowedDevices(
+      @Nonnull final AllowedBluetoothDevice[] allowedDevices) {
     setAllowedDevices( allowedDevices );
     return this;
   }

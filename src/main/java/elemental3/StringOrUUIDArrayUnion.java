@@ -26,4 +26,10 @@ public interface StringOrUUIDArrayUnion {
   static StringOrUUIDArrayUnion of(@Nonnull final JsArray<String> value) {
     return Js.cast( value );
   }
+
+  @JsOverlay
+  @Nonnull
+  static StringOrUUIDArrayUnion of(@Nonnull final String[] value) {
+    return Js.cast( value );
+  }
 }

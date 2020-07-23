@@ -49,6 +49,18 @@ public interface RequestDeviceOptions {
     return this;
   }
 
+  @JsOverlay
+  default void setFilters(@Nonnull final BluetoothLEScanFilterInit[] filters) {
+    setFilters( JsArray.asJsArray( filters ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default RequestDeviceOptions filters(@Nonnull final BluetoothLEScanFilterInit[] filters) {
+    setFilters( filters );
+    return this;
+  }
+
   @JsProperty
   JsArray<BluetoothServiceUUID> getOptionalServices();
 
@@ -59,6 +71,19 @@ public interface RequestDeviceOptions {
   @Nonnull
   default RequestDeviceOptions optionalServices(
       @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
+    setOptionalServices( optionalServices );
+    return this;
+  }
+
+  @JsOverlay
+  default void setOptionalServices(@Nonnull final BluetoothServiceUUID[] optionalServices) {
+    setOptionalServices( JsArray.asJsArray( optionalServices ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default RequestDeviceOptions optionalServices(
+      @Nonnull final BluetoothServiceUUID[] optionalServices) {
     setOptionalServices( optionalServices );
     return this;
   }

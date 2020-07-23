@@ -132,6 +132,18 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
   }
 
   @JsOverlay
+  default void setUuids(@Nonnull final StringOrUnsignedLongUnion[] uuids) {
+    setUuids( JsArray.asJsArray( uuids ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default BluetoothAdvertisingEventInit uuids(@Nonnull final StringOrUnsignedLongUnion[] uuids) {
+    setUuids( uuids );
+    return this;
+  }
+
+  @JsOverlay
   @Nonnull
   @Override
   default BluetoothAdvertisingEventInit bubbles(final boolean bubbles) {
