@@ -1,6 +1,7 @@
 package elemental3;
 
 import javax.annotation.Generated;
+import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
@@ -17,4 +18,25 @@ public class BluetoothUUID {
   @Deprecated
   BluetoothUUID() {
   }
+
+  @Nonnull
+  public static native String canonicalUUID(int alias);
+
+  @Nonnull
+  public static native String getCharacteristic(@Nonnull String name);
+
+  @Nonnull
+  public static native String getCharacteristic(int name);
+
+  @Nonnull
+  public static native String getDescriptor(@Nonnull String name);
+
+  @Nonnull
+  public static native String getDescriptor(int name);
+
+  @Nonnull
+  public static native String getService(@Nonnull String name);
+
+  @Nonnull
+  public static native String getService(int name);
 }
