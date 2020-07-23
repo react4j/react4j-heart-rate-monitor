@@ -9,9 +9,7 @@ import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import elemental2.core.DataView;
-import elemental2.core.JsArray;
 import elemental2.dom.DomGlobal;
-import elemental3.BluetoothCharacteristicUUID;
 import elemental3.BluetoothDevice;
 import elemental3.BluetoothLEScanFilterInit;
 import elemental3.BluetoothRemoteGATTCharacteristic;
@@ -54,12 +52,10 @@ abstract class HeartRateMonitor
       .requestDevice( RequestDeviceOptions
                         .create()
                         .acceptAllDevices( false )
-                        .filters( JsArray
-                                    .from( new BluetoothLEScanFilterInit[]{
-                                      BluetoothLEScanFilterInit
-                                        .create()
-                                        .services( JsArray.from( new BluetoothServiceUUID[]{ BluetoothServiceUUID.of(
-                                        "heart_rate" ) } ) ) } ) ) )
+                        .filters( new BluetoothLEScanFilterInit[]{
+                          BluetoothLEScanFilterInit
+                            .create()
+                            .services( new BluetoothServiceUUID[]{ BluetoothServiceUUID.of( "heart_rate" ) } ) } ) )
       .then( device -> {
         setServerFromDevice( device );
         return null;
