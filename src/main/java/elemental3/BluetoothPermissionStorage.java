@@ -46,14 +46,14 @@ public interface BluetoothPermissionStorage {
   }
 
   @JsOverlay
-  default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+  default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {
     setAllowedDevices( JsArray.asJsArray( allowedDevices ) );
   }
 
   @JsOverlay
   @Nonnull
   default BluetoothPermissionStorage allowedDevices(
-      @Nonnull final AllowedBluetoothDevice[] allowedDevices) {
+      @Nonnull final AllowedBluetoothDevice... allowedDevices) {
     setAllowedDevices( allowedDevices );
     return this;
   }

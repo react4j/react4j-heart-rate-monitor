@@ -90,13 +90,13 @@ public interface BluetoothLEScanFilterInit {
   }
 
   @JsOverlay
-  default void setServices(@Nonnull final BluetoothServiceUUID[] services) {
+  default void setServices(@Nonnull final BluetoothServiceUUID... services) {
     setServices( JsArray.asJsArray( services ) );
   }
 
   @JsOverlay
   @Nonnull
-  default BluetoothLEScanFilterInit services(@Nonnull final BluetoothServiceUUID[] services) {
+  default BluetoothLEScanFilterInit services(@Nonnull final BluetoothServiceUUID... services) {
     setServices( services );
     return this;
   }

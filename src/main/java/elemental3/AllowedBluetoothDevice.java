@@ -70,13 +70,13 @@ public interface AllowedBluetoothDevice {
   }
 
   @JsOverlay
-  default void setAllowedServices(@Nonnull final String[] allowedServices) {
+  default void setAllowedServices(@Nonnull final String... allowedServices) {
     setAllowedServices( StringOrUUIDArrayUnion.of( allowedServices ) );
   }
 
   @JsOverlay
   @Nonnull
-  default AllowedBluetoothDevice allowedServices(@Nonnull final String[] allowedServices) {
+  default AllowedBluetoothDevice allowedServices(@Nonnull final String... allowedServices) {
     setAllowedServices( allowedServices );
     return this;
   }
