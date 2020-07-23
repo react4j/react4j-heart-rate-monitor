@@ -81,7 +81,18 @@ abstract class HeartRateMonitor
       _server = device.gatt();
       if ( null != _server )
       {
-        connectToSelectedServer();
+        _server
+          .connect()
+          .then( server -> {
+            triggerConnectedPossiblyChanged();
+            return server.getPrimaryService( "heart_rate" );
+          } )
+          .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
+          .then( BluetoothRemoteGATTCharacteristic::startNotifications )
+          .then( characteristic -> {
+            characteristic.addEventListener( "characteristicvaluechanged", _onCharacteristicValueChanged );
+            return null;
+          } );
       }
       device.addEventListener( "gattserverdisconnected", _onServerDisconnected );
     }
@@ -92,23 +103,6 @@ abstract class HeartRateMonitor
   void triggerConnectedPossiblyChanged()
   {
     getConnectedComputableValue().reportPossiblyChanged();
-  }
-
-  void connectToSelectedServer()
-  {
-    assert null != _server;
-    _server
-      .connect()
-      .then( server -> {
-        triggerConnectedPossiblyChanged();
-        return server.getPrimaryService( "heart_rate" );
-      } )
-      .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
-      .then( BluetoothRemoteGATTCharacteristic::startNotifications )
-      .then( characteristic -> {
-        characteristic.addEventListener( "characteristicvaluechanged", _onCharacteristicValueChanged );
-        return null;
-      } );
   }
 
   void onCharacteristicValueChanged( @Nonnull final Event e )
