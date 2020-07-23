@@ -106,11 +106,9 @@ abstract class HeartRateMonitor
       .connect()
       .then( server -> {
         triggerConnectedPossiblyChanged();
-        // TODO: getPrimaryService should have an overload for each value in union
-        return server.getPrimaryService( BluetoothServiceUUID.of( "heart_rate" ) );
+        return server.getPrimaryService( "heart_rate" );
       } )
-      // TODO: getCharacteristic should have an overload for each value in union
-      .then( service -> service.getCharacteristic( BluetoothCharacteristicUUID.of( "heart_rate_measurement" ) ) )
+      .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
       .then( BluetoothRemoteGATTCharacteristic::startNotifications )
       .then( characteristic -> {
         characteristic.addEventListener( "characteristicvaluechanged", _onCharacteristicValueChanged );
