@@ -45,17 +45,16 @@ abstract class HeartRateMonitor
 
   void connect()
   {
-    //TODO: These JsArray methods should accept arrays with ...
     Navigator
       .of( DomGlobal.navigator )
       .bluetooth()
       .requestDevice( RequestDeviceOptions
                         .create()
                         .acceptAllDevices( false )
-                        .filters( new BluetoothLEScanFilterInit[]{
-                          BluetoothLEScanFilterInit
-                            .create()
-                            .services( new BluetoothServiceUUID[]{ BluetoothServiceUUID.of( "heart_rate" ) } ) } ) )
+                        .filters( BluetoothLEScanFilterInit
+                                    .create()
+                                    .services( BluetoothServiceUUID.of( "heart_rate" ) ) )
+      )
       .then( device -> {
         setServerFromDevice( device );
         return null;
