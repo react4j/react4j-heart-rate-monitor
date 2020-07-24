@@ -15,10 +15,6 @@ import jsinterop.base.Js;
     name = "Navigator"
 )
 public final class Navigator {
-  /**
-   * Use the static of method to cast an existing object to this type.
-   */
-  @Deprecated
   private Navigator() {
   }
 

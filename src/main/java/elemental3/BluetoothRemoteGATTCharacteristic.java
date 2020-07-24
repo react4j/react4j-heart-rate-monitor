@@ -30,10 +30,6 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
   @Nullable
   public EventHandler oncharacteristicvaluechanged;
 
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   BluetoothRemoteGATTCharacteristic() {
   }
 

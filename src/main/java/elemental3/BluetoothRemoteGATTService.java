@@ -28,10 +28,6 @@ public class BluetoothRemoteGATTService extends EventTarget {
   @Nullable
   public EventHandler onserviceremoved;
 
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   BluetoothRemoteGATTService() {
   }
 

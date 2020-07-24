@@ -16,10 +16,6 @@ public class BluetoothPermissionResult extends PermissionStatus {
   @Nonnull
   public JsArray<BluetoothDevice> devices;
 
-  /**
-   * Type is instantiated by the runtime no attempt should be made to instantiate type by application code.
-   */
-  @Deprecated
   BluetoothPermissionResult() {
   }
 }
