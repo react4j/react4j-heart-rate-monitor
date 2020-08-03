@@ -9,6 +9,11 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
+/**
+ * The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
+ *
+ * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService">BluetoothRemoteGATTService - MDN</a>
+ */
 @Generated("org.realityforge.webtack")
 @JsType(
     isNative = true,
@@ -31,70 +36,155 @@ public class BluetoothRemoteGATTService extends EventTarget {
   BluetoothRemoteGATTService() {
   }
 
+  /**
+   * The BluetoothGATTService.device read-only property returns information about a Bluetooth device through an instance of BluetoothDevice.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/device">BluetoothRemoteGATTService.device - MDN</a>
+   */
   @JsProperty(
       name = "device"
   )
   @Nonnull
   public native BluetoothDevice device();
 
+  /**
+   * The BluetoothGATTService.isPrimary read-only property returns a Boolean that indicates whether this is a primary service. If it is not a primary service, it is a secondary service.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/isPrimary">BluetoothRemoteGATTService.isPrimary - MDN</a>
+   */
   @JsProperty(
       name = "isPrimary"
   )
   public native boolean isPrimary();
 
+  /**
+   * The BluetoothGATTService.uuid read-only property returns a DOMString representing the UUID of this service.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/uuid">BluetoothRemoteGATTService.uuid - MDN</a>
+   */
   @JsProperty(
       name = "uuid"
   )
   @Nonnull
   public native String uuid();
 
+  /**
+   * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
       @Nonnull BluetoothCharacteristicUUID characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(
       @Nonnull String characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristic() method returns a Promise to an instance of BluetoothGATTCharacteristic for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristic">BluetoothRemoteGATTService.getCharacteristic - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTCharacteristic> getCharacteristic(int characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       @Nonnull BluetoothCharacteristicUUID characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       @Nonnull String characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics(
       int characteristic);
 
+  /**
+   * The BluetoothGATTService.getCharacteristics() method returns a Promise to a list of BluetoothGATTCharacteristic instances for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getCharacteristics">BluetoothRemoteGATTService.getCharacteristics - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTCharacteristic>> getCharacteristics();
 
+  /**
+   * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(
       @Nonnull BluetoothServiceUUID service);
 
+  /**
+   * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(@Nonnull String service);
 
+  /**
+   * The BluetoothGATTService.getIncludedService() method returns a Promise to an instance of BluetoothGATTService for a given universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedService">BluetoothRemoteGATTService.getIncludedService - MDN</a>
+   */
   @Nonnull
   public native Promise<BluetoothRemoteGATTService> getIncludedService(int service);
 
+  /**
+   * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull BluetoothServiceUUID service);
 
+  /**
+   * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(
       @Nonnull String service);
 
+  /**
+   * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices(int service);
 
+  /**
+   * The BluetoothGATTService.getIncludedServices() method returns a Promise to an Array of BluetoothGATTService instances for an optional universally unique identifier (UUID).
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothRemoteGATTService/getIncludedServices">BluetoothRemoteGATTService.getIncludedServices - MDN</a>
+   */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
 }
