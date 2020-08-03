@@ -38,9 +38,11 @@ public interface AllowedBluetoothDevice {
     return Js.<AllowedBluetoothDevice>uncheckedCast( JsPropertyMap.of() ).allowedServices( allowedServices ).deviceId( deviceId ).mayUseGATT( mayUseGATT );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "allowedServices"
+  )
   @Nonnull
-  StringOrUUIDArrayUnion getAllowedServices();
+  StringOrUUIDArrayUnion allowedServices();
 
   @JsProperty
   void setAllowedServices(@Nonnull StringOrUUIDArrayUnion allowedServices);
@@ -81,9 +83,11 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "deviceId"
+  )
   @Nonnull
-  String getDeviceId();
+  String deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
@@ -95,8 +99,10 @@ public interface AllowedBluetoothDevice {
     return this;
   }
 
-  @JsProperty
-  boolean isMayUseGATT();
+  @JsProperty(
+      name = "mayUseGATT"
+  )
+  boolean mayUseGATT();
 
   @JsProperty
   void setMayUseGATT(boolean mayUseGATT);

@@ -22,8 +22,10 @@ public interface AddEventListenerOptions extends EventListenerOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isOnce();
+  @JsProperty(
+      name = "once"
+  )
+  boolean once();
 
   @JsProperty
   void setOnce(boolean once);
@@ -35,8 +37,10 @@ public interface AddEventListenerOptions extends EventListenerOptions {
     return this;
   }
 
-  @JsProperty
-  boolean isPassive();
+  @JsProperty(
+      name = "passive"
+  )
+  boolean passive();
 
   @JsProperty
   void setPassive(boolean passive);

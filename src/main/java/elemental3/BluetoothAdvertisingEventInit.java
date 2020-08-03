@@ -23,8 +23,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return Js.<BluetoothAdvertisingEventInit>uncheckedCast( JsPropertyMap.of() ).device( device );
   }
 
-  @JsProperty
-  int getAppearance();
+  @JsProperty(
+      name = "appearance"
+  )
+  int appearance();
 
   @JsProperty
   void setAppearance(int appearance);
@@ -36,9 +38,11 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "device"
+  )
   @Nonnull
-  BluetoothDevice getDevice();
+  BluetoothDevice device();
 
   @JsProperty
   void setDevice(@Nonnull BluetoothDevice device);
@@ -50,8 +54,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  BluetoothManufacturerDataMap getManufacturerData();
+  @JsProperty(
+      name = "manufacturerData"
+  )
+  BluetoothManufacturerDataMap manufacturerData();
 
   @JsProperty
   void setManufacturerData(@Nonnull BluetoothManufacturerDataMap manufacturerData);
@@ -64,8 +70,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -77,8 +85,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  byte getRssi();
+  @JsProperty(
+      name = "rssi"
+  )
+  byte rssi();
 
   @JsProperty
   void setRssi(byte rssi);
@@ -90,8 +100,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  BluetoothServiceDataMap getServiceData();
+  @JsProperty(
+      name = "serviceData"
+  )
+  BluetoothServiceDataMap serviceData();
 
   @JsProperty
   void setServiceData(@Nonnull BluetoothServiceDataMap serviceData);
@@ -104,8 +116,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  byte getTxPower();
+  @JsProperty(
+      name = "txPower"
+  )
+  byte txPower();
 
   @JsProperty
   void setTxPower(byte txPower);
@@ -117,8 +131,10 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<StringOrUnsignedLongUnion> getUuids();
+  @JsProperty(
+      name = "uuids"
+  )
+  JsArray<StringOrUnsignedLongUnion> uuids();
 
   @JsProperty
   void setUuids(@Nonnull JsArray<StringOrUnsignedLongUnion> uuids);

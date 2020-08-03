@@ -23,8 +23,10 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
     return Js.<BluetoothPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
-  @JsProperty
-  boolean isAcceptAllDevices();
+  @JsProperty(
+      name = "acceptAllDevices"
+  )
+  boolean acceptAllDevices();
 
   @JsProperty
   void setAcceptAllDevices(boolean acceptAllDevices);
@@ -36,8 +38,10 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
     return this;
   }
 
-  @JsProperty
-  String getDeviceId();
+  @JsProperty(
+      name = "deviceId"
+  )
+  String deviceId();
 
   @JsProperty
   void setDeviceId(@Nonnull String deviceId);
@@ -49,8 +53,10 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
     return this;
   }
 
-  @JsProperty
-  JsArray<BluetoothLEScanFilterInit> getFilters();
+  @JsProperty(
+      name = "filters"
+  )
+  JsArray<BluetoothLEScanFilterInit> filters();
 
   @JsProperty
   void setFilters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters);
@@ -76,8 +82,10 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
     return this;
   }
 
-  @JsProperty
-  JsArray<BluetoothServiceUUID> getOptionalServices();
+  @JsProperty(
+      name = "optionalServices"
+  )
+  JsArray<BluetoothServiceUUID> optionalServices();
 
   @JsProperty
   void setOptionalServices(@Nonnull JsArray<BluetoothServiceUUID> optionalServices);

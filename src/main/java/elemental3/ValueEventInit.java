@@ -24,9 +24,11 @@ public interface ValueEventInit extends EventInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "value"
+  )
   @Nullable
-  Any getValue();
+  Any value();
 
   @JsProperty
   void setValue(@Nullable Any value);

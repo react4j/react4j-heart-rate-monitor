@@ -23,8 +23,10 @@ public interface BluetoothLEScanFilterInit {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  Object getManufacturerData();
+  @JsProperty(
+      name = "manufacturerData"
+  )
+  Object manufacturerData();
 
   @JsProperty
   void setManufacturerData(@Nonnull Object manufacturerData);
@@ -36,8 +38,10 @@ public interface BluetoothLEScanFilterInit {
     return this;
   }
 
-  @JsProperty
-  String getName();
+  @JsProperty(
+      name = "name"
+  )
+  String name();
 
   @JsProperty
   void setName(@Nonnull String name);
@@ -49,8 +53,10 @@ public interface BluetoothLEScanFilterInit {
     return this;
   }
 
-  @JsProperty
-  String getNamePrefix();
+  @JsProperty(
+      name = "namePrefix"
+  )
+  String namePrefix();
 
   @JsProperty
   void setNamePrefix(@Nonnull String namePrefix);
@@ -62,8 +68,10 @@ public interface BluetoothLEScanFilterInit {
     return this;
   }
 
-  @JsProperty
-  Object getServiceData();
+  @JsProperty(
+      name = "serviceData"
+  )
+  Object serviceData();
 
   @JsProperty
   void setServiceData(@Nonnull Object serviceData);
@@ -75,8 +83,10 @@ public interface BluetoothLEScanFilterInit {
     return this;
   }
 
-  @JsProperty
-  JsArray<BluetoothServiceUUID> getServices();
+  @JsProperty(
+      name = "services"
+  )
+  JsArray<BluetoothServiceUUID> services();
 
   @JsProperty
   void setServices(@Nonnull JsArray<BluetoothServiceUUID> services);

@@ -22,8 +22,10 @@ public interface WatchAdvertisementsOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  AbortSignal getSignal();
+  @JsProperty(
+      name = "signal"
+  )
+  AbortSignal signal();
 
   @JsProperty
   void setSignal(@Nonnull AbortSignal signal);

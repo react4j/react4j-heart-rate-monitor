@@ -30,9 +30,11 @@ public interface BluetoothPermissionStorage {
     return Js.<BluetoothPermissionStorage>uncheckedCast( JsPropertyMap.of() ).allowedDevices( allowedDevices );
   }
 
-  @JsProperty
+  @JsProperty(
+      name = "allowedDevices"
+  )
   @Nonnull
-  JsArray<AllowedBluetoothDevice> getAllowedDevices();
+  JsArray<AllowedBluetoothDevice> allowedDevices();
 
   @JsProperty
   void setAllowedDevices(@Nonnull JsArray<AllowedBluetoothDevice> allowedDevices);

@@ -23,8 +23,10 @@ public interface RequestDeviceOptions {
     return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
-  @JsProperty
-  boolean isAcceptAllDevices();
+  @JsProperty(
+      name = "acceptAllDevices"
+  )
+  boolean acceptAllDevices();
 
   @JsProperty
   void setAcceptAllDevices(boolean acceptAllDevices);
@@ -36,8 +38,10 @@ public interface RequestDeviceOptions {
     return this;
   }
 
-  @JsProperty
-  JsArray<BluetoothLEScanFilterInit> getFilters();
+  @JsProperty(
+      name = "filters"
+  )
+  JsArray<BluetoothLEScanFilterInit> filters();
 
   @JsProperty
   void setFilters(@Nonnull JsArray<BluetoothLEScanFilterInit> filters);
@@ -61,8 +65,10 @@ public interface RequestDeviceOptions {
     return this;
   }
 
-  @JsProperty
-  JsArray<BluetoothServiceUUID> getOptionalServices();
+  @JsProperty(
+      name = "optionalServices"
+  )
+  JsArray<BluetoothServiceUUID> optionalServices();
 
   @JsProperty
   void setOptionalServices(@Nonnull JsArray<BluetoothServiceUUID> optionalServices);
