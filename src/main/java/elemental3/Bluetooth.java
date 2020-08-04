@@ -21,6 +21,11 @@ import jsinterop.annotations.JsType;
     name = "Bluetooth"
 )
 public class Bluetooth extends EventTarget {
+  /**
+   * The onavailabilitychanged property of the Bluetooth interface is an EventHandler that processes availabilitychanged events that fire when the Bluetooth system as a whole becomes available or unavailable to the User Agent.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/onavailabilitychanged">Bluetooth.onavailabilitychanged - MDN</a>
+   */
   @Nullable
   public EventHandler onavailabilitychanged;
 
