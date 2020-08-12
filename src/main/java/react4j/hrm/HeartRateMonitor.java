@@ -59,6 +59,10 @@ abstract class HeartRateMonitor
       .then( device -> {
         setServerFromDevice( device );
         return null;
+      } )
+      .catch_( v -> {
+        // User cancelled pairing so just abort
+        return null;
       } );
   }
 
@@ -92,6 +96,10 @@ abstract class HeartRateMonitor
           .then( BluetoothRemoteGATTCharacteristic::startNotifications )
           .then( characteristic -> {
             characteristic.addCharacteristicvaluechangedListener( _onCharacteristicValueChanged );
+            return null;
+          } )
+          .catch_( v -> {
+            // Ignore error as UI will resolve correctly regardless
             return null;
           } );
       }
