@@ -91,7 +91,7 @@ abstract class HeartRateMonitor
           .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
           .then( BluetoothRemoteGATTCharacteristic::startNotifications )
           .then( characteristic -> {
-            characteristic.addCharacteristicvaluechangedListener(  _onCharacteristicValueChanged );
+            characteristic.addCharacteristicvaluechangedListener( _onCharacteristicValueChanged );
             return null;
           } );
       }
