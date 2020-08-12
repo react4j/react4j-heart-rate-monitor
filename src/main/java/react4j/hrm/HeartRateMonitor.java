@@ -15,10 +15,11 @@ import elemental3.BluetoothLEScanFilterInit;
 import elemental3.BluetoothRemoteGATTCharacteristic;
 import elemental3.BluetoothRemoteGATTServer;
 import elemental3.BluetoothServiceUUID;
-import elemental3.Event;
 import elemental3.EventListener;
 import elemental3.Navigator;
 import elemental3.RequestDeviceOptions;
+import elemental3.ValueEvent;
+import elemental3.ValueEventListener;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ import javax.annotation.Nullable;
 abstract class HeartRateMonitor
 {
   @Nonnull
-  private final EventListener _onCharacteristicValueChanged = this::onCharacteristicValueChanged;
+  private final ValueEventListener _onCharacteristicValueChanged = this::onCharacteristicValueChanged;
   @Nonnull
   private final EventListener _onServerDisconnected = e -> setServerFromDevice( null );
   @Nullable
@@ -90,7 +91,7 @@ abstract class HeartRateMonitor
           .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
           .then( BluetoothRemoteGATTCharacteristic::startNotifications )
           .then( characteristic -> {
-            characteristic.addEventListener( "characteristicvaluechanged", _onCharacteristicValueChanged );
+            characteristic.addCharacteristicvaluechangedListener(  _onCharacteristicValueChanged );
             return null;
           } );
       }
@@ -105,7 +106,7 @@ abstract class HeartRateMonitor
     getConnectedComputableValue().reportPossiblyChanged();
   }
 
-  void onCharacteristicValueChanged( @Nonnull final Event e )
+  void onCharacteristicValueChanged( @Nonnull final ValueEvent e )
   {
     final BluetoothRemoteGATTCharacteristic target = (BluetoothRemoteGATTCharacteristic) e.target();
     assert null != target;

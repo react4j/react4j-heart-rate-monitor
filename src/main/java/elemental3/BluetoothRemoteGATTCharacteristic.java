@@ -16,9 +16,11 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The BluetoothRemoteGattCharacteristic interface of the Web Bluetooth API represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
@@ -346,4 +348,40 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
 
   @Nonnull
   public native Promise<Void> writeValueWithoutResponse(@Nonnull ArrayBuffer value);
+
+  @JsOverlay
+  public final void addCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback, @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback, final boolean options) {
+    addEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback) {
+    addEventListener( "characteristicvaluechanged", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback, @Nonnull final EventListenerOptions options) {
+    removeEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback, final boolean options) {
+    removeEventListener( "characteristicvaluechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeCharacteristicvaluechangedListener(
+      @Nonnull final ValueEventListener callback) {
+    removeEventListener( "characteristicvaluechanged", Js.cast( callback ) );
+  }
 }

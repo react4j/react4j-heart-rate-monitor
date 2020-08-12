@@ -5,9 +5,11 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The BluetoothRemoteGATTService interface of the Web Bluetooth API represents a service provided by a GATT server, including a device, a list of referenced services, and a list of the characteristics of this service.
@@ -187,4 +189,106 @@ public class BluetoothRemoteGATTService extends EventTarget {
    */
   @Nonnull
   public native Promise<JsArray<BluetoothRemoteGATTService>> getIncludedServices();
+
+  @JsOverlay
+  public final void addServiceaddedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "serviceadded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServiceaddedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "serviceadded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServiceaddedListener(@Nonnull final EventListener callback) {
+    addEventListener( "serviceadded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeServiceaddedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "serviceadded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServiceaddedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "serviceadded", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServiceaddedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "serviceadded", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addServicechangedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "servicechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServicechangedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "servicechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServicechangedListener(@Nonnull final EventListener callback) {
+    addEventListener( "servicechanged", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeServicechangedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "servicechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServicechangedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "servicechanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServicechangedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "servicechanged", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void addServiceremovedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "serviceremoved", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServiceremovedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "serviceremoved", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addServiceremovedListener(@Nonnull final EventListener callback) {
+    addEventListener( "serviceremoved", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeServiceremovedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "serviceremoved", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServiceremovedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "serviceremoved", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeServiceremovedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "serviceremoved", Js.cast( callback ) );
+  }
 }
