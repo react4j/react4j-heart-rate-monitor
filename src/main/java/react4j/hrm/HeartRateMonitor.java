@@ -94,7 +94,7 @@ abstract class HeartRateMonitor
             return null;
           } );
       }
-      device.addEventListener( "gattserverdisconnected", _onServerDisconnected );
+      device.addGattserverdisconnectedListener( _onServerDisconnected );
     }
     triggerConnectedPossiblyChanged();
   }
