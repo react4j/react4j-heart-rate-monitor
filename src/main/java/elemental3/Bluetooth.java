@@ -5,9 +5,11 @@ import elemental2.promise.Promise;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 
 /**
  * The Bluetooth interface of the Web Bluetooth API returns a Promise to a BluetoothDevice object with the specified options.
@@ -92,4 +94,38 @@ public class Bluetooth extends EventTarget {
    */
   @Nonnull
   public native Promise<BluetoothDevice> requestDevice();
+
+  @JsOverlay
+  public final void addAvailabilitychangedListener(@Nonnull final EventListener callback,
+      @Nonnull final AddEventListenerOptions options) {
+    addEventListener( "availabilitychanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAvailabilitychangedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    addEventListener( "availabilitychanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void addAvailabilitychangedListener(@Nonnull final EventListener callback) {
+    addEventListener( "availabilitychanged", Js.cast( callback ) );
+  }
+
+  @JsOverlay
+  public final void removeAvailabilitychangedListener(@Nonnull final EventListener callback,
+      @Nonnull final EventListenerOptions options) {
+    removeEventListener( "availabilitychanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAvailabilitychangedListener(@Nonnull final EventListener callback,
+      final boolean options) {
+    removeEventListener( "availabilitychanged", Js.cast( callback ), options );
+  }
+
+  @JsOverlay
+  public final void removeAvailabilitychangedListener(@Nonnull final EventListener callback) {
+    removeEventListener( "availabilitychanged", Js.cast( callback ) );
+  }
 }
