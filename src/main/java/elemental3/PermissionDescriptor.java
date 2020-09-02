@@ -8,6 +8,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
+import org.intellij.lang.annotations.MagicConstant;
 
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -18,22 +19,27 @@ import jsinterop.base.JsPropertyMap;
 public interface PermissionDescriptor {
   @JsOverlay
   @Nonnull
-  static PermissionDescriptor create(@Nonnull final String name) {
+  static PermissionDescriptor create(
+      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
     return Js.<PermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
   }
 
   @JsProperty(
       name = "name"
   )
+  @MagicConstant(
+      valuesFromClass = PermissionName.class
+  )
   @Nonnull
   String name();
 
   @JsProperty
-  void setName(@Nonnull String name);
+  void setName(@MagicConstant(valuesFromClass = PermissionName.class) @Nonnull String name);
 
   @JsOverlay
   @Nonnull
-  default PermissionDescriptor name(@Nonnull final String name) {
+  default PermissionDescriptor name(
+      @MagicConstant(valuesFromClass = PermissionName.class) @Nonnull final String name) {
     setName( name );
     return this;
   }

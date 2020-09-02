@@ -1,5 +1,6 @@
 package elemental3;
 
+import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,6 +37,18 @@ public interface ValueEventInit extends EventInit {
   @JsOverlay
   @Nonnull
   default ValueEventInit value(@Nullable final Any value) {
+    setValue( value );
+    return this;
+  }
+
+  @JsOverlay
+  default void setValue(@DoNotAutobox @Nullable final Object value) {
+    setValue( Js.asAny( value ) );
+  }
+
+  @JsOverlay
+  @Nonnull
+  default ValueEventInit value(@DoNotAutobox @Nullable final Object value) {
     setValue( value );
     return this;
   }
