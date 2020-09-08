@@ -6,7 +6,7 @@ import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
 /**
- * The BluetoothCharacteristicProperties interface of the the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic.
+ * The BluetoothCharacteristicProperties interface of the the Web Bluetooth API provides the operations that are valid on the given BluetoothRemoteGATTCharacteristic.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties">BluetoothCharacteristicProperties - MDN</a>
  */
@@ -21,7 +21,7 @@ public class BluetoothCharacteristicProperties {
   }
 
   /**
-   * The authenticatedSignedWrites read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if signed writing to the characteristic value is permitted.
+   * The authenticatedSignedWrites read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if signed writing to the characteristic value is permitted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/authenticatedSignedWrites">BluetoothCharacteristicProperties.authenticatedSignedWrites - MDN</a>
    */
@@ -61,7 +61,7 @@ public class BluetoothCharacteristicProperties {
   public native boolean notify_();
 
   /**
-   * The read read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if the reading of the characteristic value is permitted.
+   * The read read-only property of the BluetoothCharacteristicProperties interface returns a boolean that is true if the reading of the characteristic value is permitted.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothCharacteristicProperties/read">BluetoothCharacteristicProperties.read - MDN</a>
    */

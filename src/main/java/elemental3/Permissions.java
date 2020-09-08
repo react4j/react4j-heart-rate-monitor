@@ -22,7 +22,7 @@ public class Permissions {
   }
 
   /**
-   * The Permissions.query() method of the Permissions interface returns the state of a user permission on the global scope.
+   * The Permissions.query() method of the Permissions interface returns the state of a user permission on the global scope.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions/query">Permissions.query - MDN</a>
    */

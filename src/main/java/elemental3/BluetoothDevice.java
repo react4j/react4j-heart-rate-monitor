@@ -11,7 +11,7 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 
 /**
- * The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a particular script execution environment.
+ * The BluetoothDevice interface of the Web Bluetooth API represents a Bluetooth device inside a particular script execution environment.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice">BluetoothDevice - MDN</a>
  */
@@ -44,7 +44,7 @@ public class BluetoothDevice extends EventTarget {
   }
 
   /**
-   * The BluetoothDevice.gatt read-only property returns a reference to the device's BluetoothRemoteGATTServer.
+   * The BluetoothDevice.gatt read-only property returns a reference to the device's BluetoothRemoteGATTServer.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/gatt">BluetoothDevice.gatt - MDN</a>
    */
@@ -55,7 +55,7 @@ public class BluetoothDevice extends EventTarget {
   public native BluetoothRemoteGATTServer gatt();
 
   /**
-   * The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device.
+   * The BluetoothDevice.id read-only property returns a DOMString that uniquely identifies a device.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/BluetoothDevice/id">BluetoothDevice.id - MDN</a>
    */

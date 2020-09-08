@@ -53,7 +53,7 @@ public class Bluetooth extends EventTarget {
   }
 
   /**
-   * The Bluetooth.referringDevice attribute of the Bluetooth interface returns a BluetoothDevice if the current document was opened in response to an instruction sent by this device and null otherwise.
+   * The Bluetooth.referringDevice attribute of the Bluetooth interface returns a BluetoothDevice if the current document was opened in response to an instruction sent by this device and null otherwise.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/referringDevice">Bluetooth.referringDevice - MDN</a>
    */
@@ -80,7 +80,7 @@ public class Bluetooth extends EventTarget {
   public native Promise<JsArray<BluetoothDevice>> getDevices();
 
   /**
-   * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
+   * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
    */
@@ -88,7 +88,7 @@ public class Bluetooth extends EventTarget {
   public native Promise<BluetoothDevice> requestDevice(@Nonnull RequestDeviceOptions options);
 
   /**
-   * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
+   * The Bluetooth.requestDevice() method of the Bluetooth interface returns a Promise to a BluetoothDevice object with the specified options. If there is no chooser UI, this method returns the first device matching the criteria.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Bluetooth/requestDevice">Bluetooth.requestDevice - MDN</a>
    */
