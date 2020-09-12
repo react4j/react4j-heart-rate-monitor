@@ -149,7 +149,7 @@ public interface BluetoothAdvertisingEventInit extends EventInit {
 
   @JsOverlay
   default void setUuids(@Nonnull final StringOrUnsignedLongUnion... uuids) {
-    setUuids( JsArray.asJsArray( uuids ) );
+    setUuids( Js.<JsArray<StringOrUnsignedLongUnion>>uncheckedCast( uuids ) );
   }
 
   @JsOverlay

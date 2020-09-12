@@ -101,7 +101,7 @@ public interface BluetoothLEScanFilterInit {
 
   @JsOverlay
   default void setServices(@Nonnull final BluetoothServiceUUID... services) {
-    setServices( JsArray.asJsArray( services ) );
+    setServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( services ) );
   }
 
   @JsOverlay

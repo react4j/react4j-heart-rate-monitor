@@ -49,7 +49,7 @@ public interface BluetoothPermissionStorage {
 
   @JsOverlay
   default void setAllowedDevices(@Nonnull final AllowedBluetoothDevice... allowedDevices) {
-    setAllowedDevices( JsArray.asJsArray( allowedDevices ) );
+    setAllowedDevices( Js.<JsArray<AllowedBluetoothDevice>>uncheckedCast( allowedDevices ) );
   }
 
   @JsOverlay

@@ -73,7 +73,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   default void setFilters(@Nonnull final BluetoothLEScanFilterInit... filters) {
-    setFilters( JsArray.asJsArray( filters ) );
+    setFilters( Js.<JsArray<BluetoothLEScanFilterInit>>uncheckedCast( filters ) );
   }
 
   @JsOverlay
@@ -102,7 +102,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   default void setOptionalServices(@Nonnull final BluetoothServiceUUID... optionalServices) {
-    setOptionalServices( JsArray.asJsArray( optionalServices ) );
+    setOptionalServices( Js.<JsArray<BluetoothServiceUUID>>uncheckedCast( optionalServices ) );
   }
 
   @JsOverlay
