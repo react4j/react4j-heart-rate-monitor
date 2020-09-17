@@ -19,6 +19,11 @@ import jsinterop.annotations.JsType;
     name = "PermissionStatus"
 )
 public class PermissionStatus extends EventTarget {
+  /**
+   * The onchange event handler of the PermissionStatus interface is called whenever the PermissionStatus.state property changes.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/PermissionStatus/onchange">PermissionStatus.onchange - MDN</a>
+   */
   @Nullable
   public EventHandler onchange;
 

@@ -30,14 +30,14 @@ public final class Navigator {
   }
 
   @JsProperty(
-      name = "permissions"
-  )
-  @Nonnull
-  public native Permissions permissions();
-
-  @JsProperty(
       name = "bluetooth"
   )
   @Nonnull
   public native Bluetooth bluetooth();
+
+  @JsProperty(
+      name = "permissions"
+  )
+  @Nonnull
+  public native Permissions permissions();
 }
