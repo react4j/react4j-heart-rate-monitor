@@ -1,6 +1,7 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
+import elemental3.PermissionStatus;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsPackage;
@@ -16,6 +17,6 @@ public class BluetoothPermissionResult extends PermissionStatus {
   @Nonnull
   public JsArray<BluetoothDevice> devices;
 
-  BluetoothPermissionResult() {
+  protected BluetoothPermissionResult() {
   }
 }

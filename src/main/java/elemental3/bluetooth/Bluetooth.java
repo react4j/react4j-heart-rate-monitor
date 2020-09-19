@@ -1,7 +1,12 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
+import elemental3.AddEventListenerOptions;
+import elemental3.EventHandler;
+import elemental3.EventListener;
+import elemental3.EventListenerOptions;
+import elemental3.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -49,7 +54,7 @@ public class Bluetooth extends EventTarget {
   @Nullable
   public EventHandler onserviceremoved;
 
-  Bluetooth() {
+  protected Bluetooth() {
   }
 
   /**

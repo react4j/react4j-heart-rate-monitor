@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -13,16 +13,16 @@ import jsinterop.base.Js;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface BluetoothDescriptorUUID {
+public interface BluetoothCharacteristicUUID {
   @JsOverlay
   @Nonnull
-  static BluetoothDescriptorUUID of(@Nonnull final String value) {
+  static BluetoothCharacteristicUUID of(@Nonnull final String value) {
     return Js.cast( value );
   }
 
   @JsOverlay
   @Nonnull
-  static BluetoothDescriptorUUID of(final int value) {
+  static BluetoothCharacteristicUUID of(final int value) {
     return Js.cast( value );
   }
 }

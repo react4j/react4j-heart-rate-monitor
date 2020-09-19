@@ -1,6 +1,7 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
+import elemental3.Event;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

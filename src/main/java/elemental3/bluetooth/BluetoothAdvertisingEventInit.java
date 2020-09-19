@@ -1,6 +1,8 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
+import elemental3.EventInit;
+import elemental3.StringOrUnsignedLongUnion;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import jsinterop.annotations.JsOverlay;

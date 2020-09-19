@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import javax.annotation.Generated;

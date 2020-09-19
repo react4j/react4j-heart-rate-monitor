@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -12,7 +12,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothUUID"
 )
 public class BluetoothUUID {
-  BluetoothUUID() {
+  protected BluetoothUUID() {
   }
 
   @Nonnull

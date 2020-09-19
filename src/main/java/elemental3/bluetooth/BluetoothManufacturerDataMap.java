@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.DataView;
 import elemental2.core.JsIterator;
@@ -19,7 +19,7 @@ import jsinterop.base.Js;
     name = "BluetoothManufacturerDataMap"
 )
 public class BluetoothManufacturerDataMap {
-  BluetoothManufacturerDataMap() {
+  protected BluetoothManufacturerDataMap() {
   }
 
   @JsProperty(

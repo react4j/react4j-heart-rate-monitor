@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import javax.annotation.Generated;
 import jsinterop.annotations.JsPackage;
@@ -17,7 +17,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothCharacteristicProperties"
 )
 public class BluetoothCharacteristicProperties {
-  BluetoothCharacteristicProperties() {
+  protected BluetoothCharacteristicProperties() {
   }
 
   /**

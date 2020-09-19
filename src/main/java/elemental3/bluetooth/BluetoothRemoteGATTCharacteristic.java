@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.ArrayBuffer;
 import elemental2.core.DataView;
@@ -13,6 +13,12 @@ import elemental2.core.Uint32Array;
 import elemental2.core.Uint8Array;
 import elemental2.core.Uint8ClampedArray;
 import elemental2.promise.Promise;
+import elemental3.AddEventListenerOptions;
+import elemental3.ArrayBufferView;
+import elemental3.BufferSource;
+import elemental3.EventHandler;
+import elemental3.EventListenerOptions;
+import elemental3.EventTarget;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -37,7 +43,7 @@ public class BluetoothRemoteGATTCharacteristic extends EventTarget {
   @Nullable
   public EventHandler oncharacteristicvaluechanged;
 
-  BluetoothRemoteGATTCharacteristic() {
+  protected BluetoothRemoteGATTCharacteristic() {
   }
 
   /**

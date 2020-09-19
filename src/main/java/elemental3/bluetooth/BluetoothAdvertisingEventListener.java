@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
@@ -6,7 +6,7 @@ import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
- * Listener for events of type ValueEvent
+ * Listener for events of type BluetoothAdvertisingEvent
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -15,9 +15,9 @@ import jsinterop.annotations.JsType;
     name = "?"
 )
 @FunctionalInterface
-public interface ValueEventListener {
+public interface BluetoothAdvertisingEventListener {
   /**
-   * Handle event of type ValueEvent
+   * Handle event of type BluetoothAdvertisingEvent
    */
-  void handleEvent(@Nonnull ValueEvent event);
+  void handleEvent(@Nonnull BluetoothAdvertisingEvent event);
 }

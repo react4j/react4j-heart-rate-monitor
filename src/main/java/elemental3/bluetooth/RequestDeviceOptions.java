@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import javax.annotation.Generated;
@@ -16,11 +16,11 @@ import jsinterop.base.JsPropertyMap;
     namespace = JsPackage.GLOBAL,
     name = "?"
 )
-public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
+public interface RequestDeviceOptions {
   @JsOverlay
   @Nonnull
-  static BluetoothPermissionDescriptor create(@PermissionName @Nonnull final String name) {
-    return Js.<BluetoothPermissionDescriptor>uncheckedCast( JsPropertyMap.of() ).name( name );
+  static RequestDeviceOptions create() {
+    return Js.uncheckedCast( JsPropertyMap.of() );
   }
 
   @JsProperty(
@@ -33,23 +33,8 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor acceptAllDevices(final boolean acceptAllDevices) {
+  default RequestDeviceOptions acceptAllDevices(final boolean acceptAllDevices) {
     setAcceptAllDevices( acceptAllDevices );
-    return this;
-  }
-
-  @JsProperty(
-      name = "deviceId"
-  )
-  String deviceId();
-
-  @JsProperty
-  void setDeviceId(@Nonnull String deviceId);
-
-  @JsOverlay
-  @Nonnull
-  default BluetoothPermissionDescriptor deviceId(@Nonnull final String deviceId) {
-    setDeviceId( deviceId );
     return this;
   }
 
@@ -63,8 +48,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor filters(
-      @Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
+  default RequestDeviceOptions filters(@Nonnull final JsArray<BluetoothLEScanFilterInit> filters) {
     setFilters( filters );
     return this;
   }
@@ -76,8 +60,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor filters(
-      @Nonnull final BluetoothLEScanFilterInit... filters) {
+  default RequestDeviceOptions filters(@Nonnull final BluetoothLEScanFilterInit... filters) {
     setFilters( filters );
     return this;
   }
@@ -92,7 +75,7 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor optionalServices(
+  default RequestDeviceOptions optionalServices(
       @Nonnull final JsArray<BluetoothServiceUUID> optionalServices) {
     setOptionalServices( optionalServices );
     return this;
@@ -105,17 +88,9 @@ public interface BluetoothPermissionDescriptor extends PermissionDescriptor {
 
   @JsOverlay
   @Nonnull
-  default BluetoothPermissionDescriptor optionalServices(
+  default RequestDeviceOptions optionalServices(
       @Nonnull final BluetoothServiceUUID... optionalServices) {
     setOptionalServices( optionalServices );
-    return this;
-  }
-
-  @JsOverlay
-  @Nonnull
-  @Override
-  default BluetoothPermissionDescriptor name(@PermissionName @Nonnull final String name) {
-    setName( name );
     return this;
   }
 }

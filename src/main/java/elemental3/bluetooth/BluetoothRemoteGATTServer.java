@@ -1,4 +1,4 @@
-package elemental3;
+package elemental3.bluetooth;
 
 import elemental2.core.JsArray;
 import elemental2.promise.Promise;
@@ -20,7 +20,7 @@ import jsinterop.annotations.JsType;
     name = "BluetoothRemoteGATTServer"
 )
 public class BluetoothRemoteGATTServer {
-  BluetoothRemoteGATTServer() {
+  protected BluetoothRemoteGATTServer() {
   }
 
   /**

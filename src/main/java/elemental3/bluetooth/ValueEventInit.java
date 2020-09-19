@@ -1,5 +1,6 @@
-package elemental3;
+package elemental3.bluetooth;
 
+import elemental3.EventInit;
 import javaemul.internal.annotations.DoNotAutobox;
 import javax.annotation.Generated;
 import javax.annotation.Nonnull;
