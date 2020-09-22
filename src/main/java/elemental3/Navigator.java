@@ -36,6 +36,11 @@ public final class Navigator {
   @Nonnull
   public native Bluetooth bluetooth();
 
+  /**
+   * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.
+   *
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions">Navigator.permissions - MDN</a>
+   */
   @JsProperty(
       name = "permissions"
   )
