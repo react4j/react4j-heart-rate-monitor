@@ -13,6 +13,7 @@ import jsinterop.base.Js;
  * The Navigator interface represents the state and the identity of the user agent. It allows scripts to query it and to register themselves to carry on some activities.
  *
  * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator">Navigator - MDN</a>
+ * @see <a href="https://html.spec.whatwg.org/multipage/#the-navigator-object">The definition of 'the Navigator object' in HTML Living Standard.</a>
  */
 @Generated("org.realityforge.webtack")
 @JsType(
@@ -40,6 +41,7 @@ public final class Navigator {
    * The Navigator.permissions read-only property returns a Permissions object that can be used to query and update permission status of APIs covered by the Permissions API.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator/permissions">Navigator.permissions - MDN</a>
+   * @see <a href="https://w3c.github.io/permissions/">Permissions</a>
    */
   @JsProperty(
       name = "permissions"
