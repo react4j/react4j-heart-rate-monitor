@@ -91,10 +91,7 @@ abstract class HeartRateMonitor
           } )
           .then( service -> service.getCharacteristic( "heart_rate_measurement" ) )
           .then( BluetoothRemoteGATTCharacteristic::startNotifications )
-          .then( characteristic -> {
-            characteristic.addCharacteristicvaluechangedListener( _onCharacteristicValueChanged );
-            return null;
-          } )
+          .thenAccept( c -> c.addCharacteristicvaluechangedListener( _onCharacteristicValueChanged ) )
           .catch_( v -> {
             // Ignore error as UI will resolve correctly regardless
             return null;
