@@ -56,10 +56,7 @@ abstract class HeartRateMonitor
                                     .create()
                                     .services( BluetoothServiceUUID.of( "heart_rate" ) ) )
       )
-      .then( device -> {
-        setServerFromDevice( device );
-        return null;
-      } )
+      .thenAccept( this::setServerFromDevice )
       .catch_( v -> {
         // User cancelled pairing so just abort
         return null;
