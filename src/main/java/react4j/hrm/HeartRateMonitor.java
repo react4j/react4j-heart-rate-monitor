@@ -8,8 +8,7 @@ import arez.annotations.DepType;
 import arez.annotations.Feature;
 import arez.annotations.Memoize;
 import arez.annotations.Observable;
-import elemental2.core.DataView;
-import elemental2.dom.DomGlobal;
+import elemental3.DataView;
 import elemental3.EventListener;
 import elemental3.Navigator;
 import elemental3.bluetooth.BluetoothDevice;
@@ -22,6 +21,7 @@ import elemental3.bluetooth.ValueEvent;
 import elemental3.bluetooth.ValueEventListener;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+import jsinterop.base.Js;
 
 @ArezComponent
 abstract class HeartRateMonitor
@@ -47,7 +47,7 @@ abstract class HeartRateMonitor
   void connect()
   {
     Navigator
-      .of( DomGlobal.navigator )
+      .of( Js.global().get( "navigator" ) )
       .bluetooth()
       .requestDevice( RequestDeviceOptions
                         .create()
