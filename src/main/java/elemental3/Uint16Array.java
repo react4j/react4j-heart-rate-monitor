@@ -46,6 +46,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(final int length) {
   }
@@ -54,6 +55,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final Uint16Array array) {
   }
@@ -62,6 +64,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final JsArray<Double> array) {
   }
@@ -70,6 +73,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final double[] array) {
   }
@@ -78,6 +82,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final ArrayBuffer buffer, final int byteOffset, final int length) {
   }
@@ -86,6 +91,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final ArrayBuffer buffer, final int byteOffset) {
   }
@@ -94,6 +100,7 @@ public class Uint16Array implements IntegerTypedArray {
    * The Uint16Array() typed array constructor creates an array of 16-bit unsigned integers in the platform byte order.
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array/Uint16Array">Uint16Array.Uint16Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint16Array(@Nonnull final ArrayBuffer buffer) {
   }

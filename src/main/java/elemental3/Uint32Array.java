@@ -46,6 +46,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(final int length) {
   }
@@ -54,6 +55,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final Uint32Array array) {
   }
@@ -62,6 +64,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final JsArray<Double> array) {
   }
@@ -70,6 +73,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final double[] array) {
   }
@@ -78,6 +82,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final ArrayBuffer buffer, final int byteOffset, final int length) {
   }
@@ -86,6 +91,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final ArrayBuffer buffer, final int byteOffset) {
   }
@@ -94,6 +100,7 @@ public class Uint32Array implements IntegerTypedArray {
    * The Uint32Array() typed array constructor creates an array of 32-bit unsigned integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array/Uint32Array">Uint32Array.Uint32Array - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
    */
   public Uint32Array(@Nonnull final ArrayBuffer buffer) {
   }
