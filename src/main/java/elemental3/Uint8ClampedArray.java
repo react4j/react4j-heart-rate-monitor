@@ -46,7 +46,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(final int length) {
   }
@@ -55,7 +55,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final Uint8ClampedArray array) {
   }
@@ -64,7 +64,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final JsArray<Double> array) {
   }
@@ -73,7 +73,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final double[] array) {
   }
@@ -82,7 +82,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final ArrayBuffer buffer, final int byteOffset,
       final int length) {
@@ -92,7 +92,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final ArrayBuffer buffer, final int byteOffset) {
   }
@@ -101,7 +101,7 @@ public class Uint8ClampedArray implements IntegerTypedArray {
    * The Uint8ClampedArray() constructor creates a typed array of 8-bit unsigned integers clamped to 0-255; if you specified a value that is out of the range of [0,255], 0 or 255 will be set instead; if you specify a non-integer, the nearest integer will be set. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray/Uint8ClampedArray">Uint8ClampedArray.Uint8ClampedArray - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Uint8ClampedArray(@Nonnull final ArrayBuffer buffer) {
   }
@@ -133,8 +133,8 @@ public class Uint8ClampedArray implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Uint8ClampedArray copyWithin(int target, int start, int end);
@@ -142,8 +142,8 @@ public class Uint8ClampedArray implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Uint8ClampedArray copyWithin(int target, int start);

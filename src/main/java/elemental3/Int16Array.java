@@ -46,7 +46,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(final int length) {
   }
@@ -55,7 +55,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final Int16Array array) {
   }
@@ -64,7 +64,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final JsArray<Double> array) {
   }
@@ -73,7 +73,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final double[] array) {
   }
@@ -82,7 +82,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final ArrayBuffer buffer, final int byteOffset, final int length) {
   }
@@ -91,7 +91,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final ArrayBuffer buffer, final int byteOffset) {
   }
@@ -100,7 +100,7 @@ public class Int16Array implements IntegerTypedArray {
    * The Int16Array() typed array constructor creates an array of twos-complement 16-bit signed integers in the platform byte order. If control over byte order is needed, use DataView instead. The contents are initialized to 0. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
    *
    * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array/Int16Array">Int16Array.Int16Array - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">The definition of 'TypedArray constructors' in the 'ECMAScript (ECMA-262)' specification.</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-typedarray-constructors">TypedArray constructors - ECMAScript (ECMA-262)</a>
    */
   public Int16Array(@Nonnull final ArrayBuffer buffer) {
   }
@@ -132,8 +132,8 @@ public class Int16Array implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Int16Array copyWithin(int target, int start, int end);
@@ -141,8 +141,8 @@ public class Int16Array implements IntegerTypedArray {
   /**
    * The copyWithin() method shallow copies part of an array to another location in the same array and returns it without modifying its length.
    *
-   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">Typed%TypedArray%.prototype.copyWithin() - MDN</a>
-   * @see <a href="https://tc39.es/ecma262/#sec-%typedarray%.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
+   * @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/copyWithin">TypedArray.prototype.copyWithin() - MDN</a>
+   * @see <a href="https://tc39.es/ecma262/#sec-%25typedarray%25.prototype.copywithin">%TypedArray%.prototype.copyWithin - ECMA</a>
    */
   @Nonnull
   public native Int16Array copyWithin(int target, int start);
