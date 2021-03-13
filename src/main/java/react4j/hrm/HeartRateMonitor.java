@@ -1,13 +1,5 @@
 package react4j.hrm;
 
-import arez.ComputableValue;
-import arez.annotations.Action;
-import arez.annotations.ArezComponent;
-import arez.annotations.ComputableValueRef;
-import arez.annotations.DepType;
-import arez.annotations.Feature;
-import arez.annotations.Memoize;
-import arez.annotations.Observable;
 import akasha.DataView;
 import akasha.EventListener;
 import akasha.Navigator;
@@ -19,6 +11,14 @@ import akasha.bluetooth.BluetoothServiceUUID;
 import akasha.bluetooth.RequestDeviceOptions;
 import akasha.bluetooth.ValueEvent;
 import akasha.bluetooth.ValueEventListener;
+import arez.ComputableValue;
+import arez.annotations.Action;
+import arez.annotations.ArezComponent;
+import arez.annotations.ComputableValueRef;
+import arez.annotations.DepType;
+import arez.annotations.Feature;
+import arez.annotations.Memoize;
+import arez.annotations.Observable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import jsinterop.base.Js;
