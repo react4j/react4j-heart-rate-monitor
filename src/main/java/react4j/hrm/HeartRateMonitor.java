@@ -1,8 +1,7 @@
 package react4j.hrm;
 
-import akasha.DataView;
 import akasha.EventListener;
-import akasha.Navigator;
+import akasha.Global;
 import akasha.bluetooth.BluetoothDevice;
 import akasha.bluetooth.BluetoothLEScanFilterInit;
 import akasha.bluetooth.BluetoothRemoteGATTCharacteristic;
@@ -11,6 +10,7 @@ import akasha.bluetooth.BluetoothServiceUUID;
 import akasha.bluetooth.RequestDeviceOptions;
 import akasha.bluetooth.ValueEvent;
 import akasha.bluetooth.ValueEventListener;
+import akasha.core.DataView;
 import arez.ComputableValue;
 import arez.annotations.Action;
 import arez.annotations.ArezComponent;
@@ -21,7 +21,6 @@ import arez.annotations.Memoize;
 import arez.annotations.Observable;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import jsinterop.base.Js;
 
 @ArezComponent
 abstract class HeartRateMonitor
@@ -46,8 +45,8 @@ abstract class HeartRateMonitor
 
   void connect()
   {
-    Navigator
-      .of( Js.global().get( "navigator" ) )
+    Global
+      .navigator()
       .bluetooth()
       .requestDevice( RequestDeviceOptions
                         .create()
