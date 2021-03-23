@@ -1,4 +1,5 @@
 require 'buildr/git_auto_version'
+require 'buildr/top_level_generate_dir'
 require 'buildr/gwt'
 
 desc 'React4j WebSpeech Demo'
