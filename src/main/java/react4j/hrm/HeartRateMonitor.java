@@ -1,7 +1,7 @@
 package react4j.hrm;
 
 import akasha.EventListener;
-import akasha.Global;
+import akasha.WindowGlobal;
 import akasha.bluetooth.BluetoothDevice;
 import akasha.bluetooth.BluetoothLEScanFilterInit;
 import akasha.bluetooth.BluetoothRemoteGATTCharacteristic;
@@ -45,7 +45,7 @@ abstract class HeartRateMonitor
 
   void connect()
   {
-    Global
+    WindowGlobal
       .navigator()
       .bluetooth()
       .requestDevice( RequestDeviceOptions
