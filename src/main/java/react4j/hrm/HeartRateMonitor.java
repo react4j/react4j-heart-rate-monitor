@@ -49,10 +49,10 @@ abstract class HeartRateMonitor
       .navigator()
       .bluetooth()
       .requestDevice( RequestDeviceOptions
-                        .create()
+                        .of()
                         .acceptAllDevices( false )
                         .filters( BluetoothLEScanFilterInit
-                                    .create()
+                                    .of()
                                     .services( BluetoothServiceUUID.of( "heart_rate" ) ) )
       )
       .thenAccept( this::setServerFromDevice )
